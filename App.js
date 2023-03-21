@@ -1,11 +1,14 @@
 import * as React from 'react';
+import { Provider } from 'react-redux';
+import { store } from './src/_store';
 
-import TabNavScreen from "/src/screen/navigation/NavScreen"; 
+import TabNavScreen from "./src/screen/navigation/NavScreen"; 
 
 
 export default function App() {
   return (
-          <TabNavScreen></TabNavScreen>
-  
+    <Provider store={store}>
+      <TabNavScreen></TabNavScreen>
+    </Provider>
   );
 }
