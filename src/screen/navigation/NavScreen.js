@@ -3,7 +3,7 @@ import { useColorScheme } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { DefaultTheme, DarkTheme, NavigationContainer } from '@react-navigation/native'
 
-
+import PollScreen from '../qpoll/PollScreen';
 import QPollScreen from "../qpoll/QPollScreen";
 import CategoryScreen from "../category/CategoryScreen";
 import ProfileScreen from "../profile/ProfileScreen";
@@ -30,6 +30,7 @@ export default function NavScreen() {
       <NavigationContainer theme={scheme === 'dark' ? MyTheme : MyTheme}>
         <Tab.Navigator>
           <Tab.Screen name="Home" component={HomeScreen} />
+          <Tab.Screen name="pollScreen" component={PollScreen} />
           <Tab.Screen name="qpoll" component={QPollScreen} />
           <Tab.Screen name="Kategoriler" component={CategoryScreen} />
           <Tab.Screen name="Profil" component={ProfileScreen} />
